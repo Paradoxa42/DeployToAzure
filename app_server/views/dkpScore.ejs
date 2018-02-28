@@ -7,12 +7,49 @@
   </head>
   <body>
     <% include ./header.ejs %>
-    <p>dkpScoreTable</p>
-
-    <ul>
-        <li>Friska : 90</li>
-        <li>Nemara : 76</li>
-        <li>Nodus : 12</li>
-    </ul>
+    <div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Action</th>
+            <th scope="col">DKPoint earning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Killing a boss</td>
+            <td>10</td>
+          </tr>
+          <tr>
+              <th scope="row">2</th>
+              <td>Participating a raid</td>
+              <td>5</td>
+          </tr>
+          <tr>
+              <th scope="row">3</th>
+              <td>Giving a component to the bank</td>
+              <td>2</td>
+          </tr>
+          <tr>
+              <th scope="row">4</th>
+              <td>Write a strat</td>
+              <td>4</td>
+          </tr>
+          <tr>
+              <th scope="row">5</th>
+              <td>Joining the guild</td>
+              <td>1</td>
+          </tr>
+          <tr>
+              <th scope="row">6</th>
+              <td>Being nice</td>
+              <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% include ./footer.ejs %>
     </body>
 </html>

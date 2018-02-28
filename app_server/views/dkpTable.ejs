@@ -7,11 +7,55 @@
   </head>
   <body>
     <% include ./header.ejs %>
-    <p>DKP Table</p>
-    <ul>
-        <li>killing a boss : 89</li>
-        <li>picking a flower : 12</li>
-        <li>be awsome : 1</li>
-    </ul>
+    <div class="container">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">DKPoint of the month</th>
+              <th scope="col">DKPoint total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Friska</td>
+              <td>76</td>
+              <td>643</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Nemara</td>
+                <td>23</td>
+                <td>213</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Nodus</td>
+                <td>2</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Pusu</td>
+                <td>18</td>
+                <td>298</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Evhy</td>
+                <td>1</td>
+                <td>209</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Frahy</td>
+                <td>77</td>
+                <td>9878</td>
+            </tr>
+          </tbody>
+        </table>    </div>
+    <% include ./footer.ejs %>
     </body>
 </html>

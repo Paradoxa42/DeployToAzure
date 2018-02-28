@@ -5,8 +5,7 @@ var dkpTableCtrl = require("../Controllers/dkpTable");
 var dkpScoreCtrl = require("../Controllers/dkpScore");
 
 /* GET home page. */
-router.get('/', mainCtrl.index);
-router.get('/dkpTable', dkpTableCtrl.index);
-router.get('/dkpScore', dkpScoreCtrl.index);
+router.get('/', dkpTableCtrl.index);
+router.get('/dkpTable', dkpScoreCtrl.index);
 
 module.exports = router;
