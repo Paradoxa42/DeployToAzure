@@ -4,13 +4,6 @@ const activitModelSchema = mongoose.model('activityModel');
 
 //GET activitiesModel by character
 const gettActivityModelSchemaByCharacter = function(req, res) {
-    res.status(200).json(
-        {
-            'idChar' : '',
-            'idActivity' : '',
-            'date' : '',
-        }
-    )
 };
 
 //POST activityModel

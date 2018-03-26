@@ -42,6 +42,6 @@ const activityModelSchema = new mongoose.Schema({
     dkpEarning : Number,
 });
 
-mongoose.model('activityModel', activityModelSchema);
-mongoose.model('activity', activitySchema);
-mongoose.model('character', characterSchema);
+mongoose.model('activityModel', activityModelSchema, 'activityModel');
+mongoose.model('activity', activitySchema, 'activity');
+mongoose.model('character', characterSchema, 'character');

@@ -8,7 +8,7 @@
   <body>
     <% include ./header.ejs %>
     <div class="container">
-        <table class="table">
+        <table class="table tableBodyScroll">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
@@ -17,45 +17,26 @@
               <th scope="col">DKPoint total</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="characterTable">
+          </tbody>
+          <tbody class="no-scroll">
             <tr>
-              <th scope="row">1</th>
-              <td>Friska</td>
-              <td>76</td>
-              <td>643</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Nemara</td>
-                <td>23</td>
-                <td>213</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Nodus</td>
-                <td>2</td>
-                <td>21</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Pusu</td>
-                <td>18</td>
-                <td>298</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Evhy</td>
-                <td>1</td>
-                <td>209</td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Frahy</td>
-                <td>77</td>
-                <td>9878</td>
+              <th scope="row">#</th>
+              <td>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="inputCharacterName" placeholder="character name...">
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <button type="submit" id="inputCharacterSubmit" class="btn btn-primary">Add Character</button>
+              </td>
             </tr>
           </tbody>
-        </table>    </div>
+        </table>
+      </div>
     <% include ./footer.ejs %>
+    <script src='/javascripts/dkpTableFront.js'></script>
+    <script></script>
     </body>
 </html>

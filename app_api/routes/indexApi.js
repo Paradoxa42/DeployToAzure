@@ -5,7 +5,7 @@ const characterController = require('../controller/characterController');
 const activityController = require('../controller/activityController');
 const activityModelController = require('../controller/activityModelController');
 
-//CharacterRoutes
+//Character routes
 route
     .route('/character')
     .get(characterController.getCharacters)
@@ -18,6 +18,11 @@ route
     .delete(characterController.deleteCharacter);
 
 route
+    .route('/charactersScore')
+    .get(characterController.getCharactersScore);
+
+//Activities routes
+route
     .route('/activity')
     .get(activityController.getActivitySchemas)
     .post(activityController.postActivitySchema)
@@ -27,14 +32,12 @@ route
     .put(activityController.putActivitySchema)
     .delete(activityController.deleteActivitySchema);
 
+//ActivitiesModel routes
 route
     .route('/activityModel')
+    .get(activityModelController.gettActivityModelSchemaByCharacter)
     .post(activityModelController.postActivityModelSchema)
     .put(activityModelController.putActivityModelSchema)
     .delete(activityModelController.deleteActivityModelSchema)
-
-route
-    .route('/activity/:id')
-    .get(activityModelController.gettActivityModelSchemaByCharacter)
 
 module.exports = route;

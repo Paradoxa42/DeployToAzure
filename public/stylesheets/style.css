@@ -6,6 +6,20 @@ a {
   color: #00B7FF;
 }
 
+.tableBodyScroll tbody {
+  display:block;
+  max-height:600px;
+  overflow-y:scroll;
+  }
+  .tableBodyScroll thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+  }
+
+.no-scroll {
+  overflow-y: unset !important;
+}
 .footer {
   border-top: 1px solid gray;
   padding: 50px;
