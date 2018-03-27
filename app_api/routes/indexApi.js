@@ -38,7 +38,7 @@ route
     .get(activityModelController.gettActivityModelSchemaByCharacter)
     .post(activityModelController.postActivityModelSchema)
     .put(activityModelController.putActivityModelSchema)
-    .route('/activityModel/:id')
+route.route('/activityModel/:id')
     .delete(activityModelController.deleteActivityModelSchema)
 
 module.exports = route;

@@ -28,7 +28,7 @@ mongoose.connection.on(
 
 //Making models
 const characterSchema = new mongoose.Schema({
-    total : Number = 0,
+    total : Number,
     name : String,
 });
 
