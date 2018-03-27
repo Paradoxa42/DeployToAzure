@@ -2,7 +2,7 @@ const apiUrl = {
     server : 'http://localhost:3000'
 }
 
-//apiUrl.server = 'https://legaldekerangal-timothee.azurewebsites.net/'
+apiUrl.server = 'https://legaldekerangal-timothee.azurewebsites.net/'
 
 var tablen = 0;
 var activities = [];
