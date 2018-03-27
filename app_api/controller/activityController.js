@@ -4,7 +4,7 @@ const activitySchema = mongoose.model('activity');
 
 //GET activities
 const getActivitySchemas = function(req, res) {
-    activitySchema.find(function(err, data) {
+    activitySchema.find({ idChar : req.params.id} ,function(err, data) {
         if (err) {
             res.status(500).json({'status' : 'failed'});
         }
@@ -15,8 +15,9 @@ const getActivitySchemas = function(req, res) {
 //POST activity
 const postActivitySchema = function (req, res) {
     var item = new activitySchema({
-        name : req.body.name,
-        dkpEarning : req.body.dkpEarning,    
+        idChar : req.params.id,
+        idActivity : req.body.id,
+        date : new Date(),
     });
     item.save(function(err, post) {
         if (err) { 
@@ -25,7 +26,7 @@ const postActivitySchema = function (req, res) {
         else {
             res.status(200).json({'status' : 'ok', 'data' : post});
         }
-    })
+    });
 };
 
 //PUT activity
@@ -35,7 +36,7 @@ const putActivitySchema = function (req, res) {
 
 //DELETE activity
 const deleteActivitySchema = function (req, res) {
-    activitySchema.remove({ _id : ObjectId(req.body.id)} , function(err, data) {
+    activitySchema.remove({ _id : ObjectId(req.params.id)} , function(err, data) {
         if (err) {
             res.status(500).json({'status' : 'failed'});
         }

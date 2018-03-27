@@ -10,7 +10,7 @@ var characters = [];
 
 function printCharacter (character) {
     tablen++;
-    var charTab = "<tr><th scope='row'>" + tablen + "</th><td>" + character.name + "</td><td>0</td><td>0</td><td><i class='fas fa-times' onclick='deleteCharacter(\"" + character._id + "\")'></i></td></tr>"
+    var charTab = "<tr><th scope='row'>" + tablen + "</th><td>" + character.name + "</td><td>0</td><td><i class='fas fa-times' onclick='deleteCharacter(\"" + character._id + "\")'></i></td></tr>"
     $("#characterTable").append(charTab)
 }
 
@@ -40,7 +40,7 @@ function printCharacters (characters) {
     tablen = 0;
     for(var item in characters) {
         console.log(characters[item]);
-        var charTab = "<tr><th scope='row'>" + item + "</th><td>" + characters[item].name + "</td><td>0</td><td>0</td><td><i class='fas fa-times' onclick='deleteCharacter(\"" + characters[item]._id + "\")'></i></td></tr>"
+        var charTab = "<tr><th scope='row'>" + item + "</th><td>" + characters[item].name + "</td><td>0</td><td><i class='fas fa-times' onclick='deleteCharacter(\"" + characters[item]._id + "\")'></i></td></tr>"
         $("#characterTable").append(charTab)
         tablen = item;
     }

@@ -38,6 +38,7 @@ const getCharacter = function(req, res) {
 const postCharacter = function(req, res) {
     var item = new characterModel({
         name : req.body.name,
+        total : 0,
     });
     item.save(function(err, post) {
         if (err) { 
