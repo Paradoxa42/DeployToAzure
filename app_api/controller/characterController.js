@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+var ObjectId = require('mongodb').ObjectID;
 const characterModel = mongoose.model('character');
 const activitySchema = mongoose.model('activity');
 const activitModelSchema = mongoose.model('activityModel');
@@ -55,12 +56,14 @@ const putCharacter = function(req, res) {
 
 //DELETE character
 const deleteCharacter = function(req, res) {
-    characterModel.remove({ _id : ObjectId(req.body.id)} , function(err, data) {
+    console.log("Delete character");
+    characterModel.remove({ _id : ObjectId(req.params.id)} , function(err, data) {
+        console.log("removed kebab");
         if (err) {
             res.status(500).json({'status' : 'failed'});
         }
-        res.status(200).json(data);
-    })
+        res.status(200).json(req.params.id);
+    }).exec()
 }
 
 module.exports = {
